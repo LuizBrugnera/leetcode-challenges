@@ -12,5 +12,12 @@
     "difficulty": "Medium",
     "url": "https://leetcode.com/problems/number-of-islands/",
     "description": "Given a 2D grid represented as a matrix of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water."
+  },
+  {
+    "id": 122,
+    "title": "Best Time to Buy and Sell Stock II",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock-ii/",
+    "description": "Say you have an array for which the ith element is the price of a given stock on day i. Design an algorithm to find the maximum profit. You may complete as many transactions as you like (i.e., buy one and sell one share of the stock multiple times). However, you may not engage in multiple transactions at the same time (i.e., you must sell the stock before you buy again)."
   }
 ]
