@@ -5,5 +5,12 @@
     "difficulty": "Medium",
     "url": "https://leetcode.com/problems/longest-increasing-path-in-a-matrix/",
     "description": "Given an m x n integers matrix, return the length of the longest increasing path in matrix. From each cell, you can move in four directions: up, down, left, and right. You may not move diagonally or move outside of the matrix."
+  },
+  {
+    "id": 200,
+    "title": "Number of Islands",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/number-of-islands/",
+    "description": "Given a 2D grid represented as a matrix of '1's (land) and '0's (water), count the number of islands. An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water."
   }
 ]
