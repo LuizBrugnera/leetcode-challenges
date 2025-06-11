@@ -5,11 +5,11 @@ class TreeNode:
         self.right = right
 
 def inorderTraversal(root):
-    result = []
+    res = []
     def traverse(node):
         if node:
             traverse(node.left)
-            result.append(node.val)
+            res.append(node.val)
             traverse(node.right)
     traverse(root)
-    return result
+    return res
