@@ -1,14 +1,21 @@
-def permuteUnique(nums):
-    def backtrack(start):
-        if start == len(nums):
-            result.add(tuple(nums[:]))
-            return
-        for i in range(start, len(nums)):
-            nums[start], nums[i] = nums[i], nums[start]
-            backtrack(start + 1)
-            nums[start], nums[i] = nums[i], nums[start]
-    
-    result = set()
+from typing import List
+
+def permuteUnique(nums: List[int]) -> List[List[int]]:
+    res = []
     nums.sort()
-    backtrack(0)
-    return [list(p) for p in result]
+    
+    def backtrack(path, used):
+        if len(path) == len(nums):
+            res.append(path[:])
+            return
+        for i in range(len(nums)):
+            if used[i] or (i > 0 and nums[i] == nums[i - 1] and not used[i - 1]):
+                continue
+            used[i] = True
+            path.append(nums[i])
+            backtrack(path, used)
+            path.pop()
+            used[i] = False
+            
+    backtrack([], [False] * len(nums))
+    return res
