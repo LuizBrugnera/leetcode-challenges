@@ -1,9 +1,9 @@
 def longestValidParentheses(s: str) -> int:
-    stack = [-1]
     max_length = 0
+    stack = [-1]
     
-    for i in range(len(s)):
-        if s[i] == '(':
+    for i, char in enumerate(s):
+        if char == '(':
             stack.append(i)
         else:
             stack.pop()
