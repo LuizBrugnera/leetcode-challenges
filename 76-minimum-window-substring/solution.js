@@ -1,25 +1,25 @@
-from collections import Counter
+from collections import Counter, defaultdict
 
-def min_window(S, T):
-    if not T or not S:
+def minWindow(s: str, t: str) -> str:
+    if not t or not s:
         return ""
     
-    dict_t = Counter(T)
+    dict_t = Counter(t)
     required = len(dict_t)
     l, r = 0, 0
     formed = 0
-    window_counts = {}
+    window_counts = defaultdict(int)
     ans = float("inf"), None, None
     
-    while r < len(S):
-        character = S[r]
-        window_counts[character] = window_counts.get(character, 0) + 1
+    while r < len(s):
+        character = s[r]
+        window_counts[character] += 1
         
         if character in dict_t and window_counts[character] == dict_t[character]:
             formed += 1
-            
+        
         while l <= r and formed == required:
-            character = S[l]
+            character = s[l]
             end = r - l + 1
             
             if end < ans[0]:
@@ -28,9 +28,9 @@ def min_window(S, T):
             window_counts[character] -= 1
             if character in dict_t and window_counts[character] < dict_t[character]:
                 formed -= 1
-                
-            l += 1
             
+            l += 1
+        
         r += 1
-
-    return "" if ans[0] == float("inf") else S[ans[1]: ans[2] + 1]
+    
+    return "" if ans[0] == float("inf") else s[ans[1]: ans[2] + 1]
