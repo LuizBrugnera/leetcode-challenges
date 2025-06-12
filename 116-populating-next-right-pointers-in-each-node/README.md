@@ -12,4 +12,6 @@ struct Node {
   Node *next;
 }
 
-Populating Next Right Pointers in Each Node requires you to connect all nodes at the same level. The value of the next pointer of a node is automatically connected to the next node at the same level in the tree. If there is no next node, the next pointer should be set to NULL.
+Populates each next pointer to point to its next right node. If there is no next right node, the next pointer should be set to NULL.
+
+Initially, all next pointers are set to NULL.

@@ -3,7 +3,6 @@ public:
     void connect(Node* root) {
         if (!root) return;
         Node* leftmost = root;
-
         while (leftmost->left) {
             Node* head = leftmost;
             while (head) {
